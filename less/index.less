@@ -1,0 +1,270 @@
+// out :../css/
+
+@import "./base.less";
+
+@vw:3.75vw;
+
+body {
+    background-color: #f9fafb;
+}
+
+// 头部
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    height: (50 / @vw);
+    background-color: #fff;
+    .left {
+        width: (235 / @vw);
+        height: (50 / @vw);
+        background-image: url(../assets/head.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .right {
+        margin-right: (15 / @vw);
+        width: (80 / @vw);
+        height: (30 / @vw);
+        font-size: (13 / @vw);
+        background-color: #ffe31b;
+        border-radius: (20 / @vw);
+        text-align: center;
+        line-height: (30 / @vw);
+    }
+}
+
+// 搜索框
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: (60 / @vw) auto 0;
+    width: (343 / @vw);
+    height: (32 / @vw);
+    background-color: #f2f4f5;
+    border-radius: (20 / @vw);
+    font-size: (14 / @vw);
+    color: #a1a4b3;
+    .iconfont {
+        font-size: (16 / @vw);
+    }
+}
+
+// banner
+.banner {
+    margin-top: (10 / @vw);
+    padding: 0 (15 / @vw); 
+    height: (108 / @vw);
+    ul {
+        li {
+            width: (345 / @vw);
+            height: (108 / @vw);
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: (7 / @vw);
+            }
+        }
+    }
+}
+
+// 区块公共样式
+.title {
+    margin-top: (25 / @vw);
+    margin-bottom: (13 / @vw);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: (28 / @vw);
+    h4 {
+        font-size: (20 / @vw);
+        font-weight: 700;
+    }
+    a {
+        font-size: (12 / @vw);
+        color: #a1a4b3;
+        .iconfont {
+            font-size: (12 / @vw);
+        }
+    }
+}
+
+// 排行榜
+.rank {
+    padding: 0 (15 / @vw);
+    .rank-content {
+        height: (346 / @vw);
+        li {
+            margin-bottom: (15 / @vw);
+            height: (105 / @vw);
+            background-color: #fff;
+            border-radius: (16 / @vw);
+            a {
+                display: flex;
+                .left img{
+                    width: (105 / @vw);
+                    height: (105 / @vw);
+                    border-radius: (16 / @vw);
+                }
+                .right {
+                    padding-top: (13.5 / @vw);
+                    margin-left: (21 / @vw);
+                    h5 {
+                        margin-bottom: (6 / @vw);
+                        font-size: (14 / @vw);
+                        font-weight: 400;
+                        .iconfont {
+                            font-size: (14 / @vw);
+                        }
+                    }
+                    p {
+                        margin-bottom: (3.5 / @vw);
+                        font-size: (12 / @vw);
+                        color: #a1a4b3;
+                    }
+                }
+            }  
+        }
+    }
+}
+
+// 推荐歌单
+.recommend {
+    padding: 0 (15 / @vw);
+}
+
+// 听书
+.listening {
+    padding: 0 (15 / @vw);
+    .content{
+        height: (173 / @vw);
+    }
+}
+
+// 区块公共样式
+.content {
+    height: (328 / @vw);
+    ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        li {
+            &:nth-child(-n+3) {
+                margin-bottom: (18 / @vw);
+            }
+            
+            width: (105 / @vw);
+            height: (155 / @vw);
+            .pic {
+                position: relative;
+                img {
+                    width: (105 / @vw);
+                    height: (105 /@vw);
+                    border-radius: (16 / @vw);
+                }
+                .cover {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: (70 / @vw);
+                    height: (28 / @vw);
+                    background-color: rgba(0,0,0,0.3);
+                    border-radius: 0 (16 / @vw) 0 (16 / @vw);
+                    font-size: (13 / @vw);
+                    font-weight: 700;
+                    color: #fff;
+                    text-align: center;
+                    line-height: (28 / @vw);
+                }
+            }
+            .text {
+                margin-top: (10 / @vw);
+                overflow: hidden;
+                p {
+                    width: (100 / @vw);
+                    height: (40 / @vw);
+                    font-size: (14 / @vw);
+                    line-height: (20 / @vw);
+                }
+            }
+        }
+    }
+}
+
+// 版权
+.copyright {
+    margin-top: (45 / @vw);
+    margin-bottom: (107 / @vw);
+    height: (87 / @vw); 
+    .top {
+        display: flex;
+        justify-content: center;
+        font-size: (14 / @vw);
+        img {
+            width: (22 / @vw);
+            height: (23 / @vw);
+        }
+        p {
+            margin-left: (6 / @vw);
+            align-self: flex-end;
+        }
+    }
+    .botton {
+        margin-top: (9.5 / @vw);
+        text-align: center;
+        font-size: (11 / @vw);
+        color: #a1a4b3;
+        .iconfont {
+            font-size: (11 / @vw);
+        }
+    }
+}
+
+// 下载区域
+.download {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: (18 / @vw);
+    padding-right: (9 / @vw);
+    position: fixed;
+    bottom: 8vw;
+    margin: 0 (27 / @vw);
+    width: (320 / @vw);
+    height: (45 / @vw);
+    background-color: #fff;
+    border-radius: 6vw;
+    .left {
+        display: flex;
+        align-items: center;
+        .pic {
+            img {
+                width: (37 / @vw);
+                height: (37 / @vw);
+            }
+        }
+        .text {
+            margin-left: (5 / @vw);
+            font-size: (14 / @vw);
+            font-weight: 700;
+        }
+    }
+    .right {
+        .iconfont {
+            display: block;
+            width: 7.2vw;
+            height: 7.2vw;
+            background-color: #f2f3f5;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 7.2vw;
+            font-size: (16 / @vw);
+        }
+    }
+}
